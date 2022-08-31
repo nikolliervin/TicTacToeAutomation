@@ -14,6 +14,7 @@ namespace TicTacToeAutomation
         {
             Thread.Sleep(5000);
             driver.FindElement(SquareOfIndex(index)).Click();
+            Thread.Sleep(5000);
         }
 
 

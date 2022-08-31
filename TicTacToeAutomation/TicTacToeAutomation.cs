@@ -1,4 +1,4 @@
-﻿using OpenQA.Selenium;
+﻿using OpenQA.Selenium.Chrome;
 
 namespace TicTacToeAutomation
 {
@@ -7,12 +7,12 @@ namespace TicTacToeAutomation
 
         static void Main(string[] args)
         {
-            var driver = new IWebDriver();
+            ChromeDriver driver = new ChromeDriver();
             var steps = new Steps();
 
             steps.GoToURL(driver);
             steps.PlaySquareOfIndex(driver, 1);
-            driver.Quit();
+
 
         }
     }

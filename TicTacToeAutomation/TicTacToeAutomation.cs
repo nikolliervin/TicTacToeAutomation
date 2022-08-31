@@ -24,6 +24,14 @@ namespace TicTacToeAutomation
             {
                 steps.PlaySquareOfIndex(driver, game.PickAndPushOut(favoriteStates));
 
+                game.CheckRemoveStateBusy(driver, allStates);
+                game.CheckRemoveStateBusy(driver, favoriteStates);
+
+                steps.PlaySquareOfIndex(driver, game.PickAndPushOut(favoriteStates));
+
+
+
+
 
 
             }

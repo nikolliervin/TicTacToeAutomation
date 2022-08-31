@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium.Chrome;
+using System.Threading;
 
 namespace TicTacToeAutomation
 {
@@ -11,6 +12,7 @@ namespace TicTacToeAutomation
 
         public void PlaySquareOfIndex(ChromeDriver driver, int index)
         {
+            Thread.Sleep(5000);
             driver.FindElement(SquareOfIndex(index)).Click();
         }
 

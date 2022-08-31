@@ -11,6 +11,8 @@ namespace TicTacToeAutomation
             var steps = new Steps();
 
             steps.GoToURL(driver);
+            steps.PlaySquareOfIndex(driver, 1);
+            driver.Quit();
 
         }
     }

@@ -11,22 +11,19 @@ namespace TicTacToeAutomation
         {
             ChromeDriver driver = new ChromeDriver();
             var steps = new Steps();
+            var game = new GameStrategy();
             var IStartFirst = true;
 
             steps.GoToURL(driver);
 
             List<int> favoriteStates = new List<int>() { 1, 3, 5, 7, 9 };
+            List<int> allStates = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
             Random random = new Random();
 
             while (IStartFirst)
             {
-                steps.PlaySquareOfIndex(driver, random.Next(favoriteStates.Count));
+                steps.PlaySquareOfIndex(driver, game.PickAndPushOut(favoriteStates));
 
-                if (!steps.IsFreeSqureOfIndex(driver, 1))
-                {
-                    steps.PlaySquareOfIndex(driver, 1);
-                }
-                else if (!steps.IsFreeSqureOfIndex(driver, 1)) { }
 
 
             }

@@ -16,6 +16,7 @@ namespace TicTacToeAutomation
             while (IStartFirst)
             {
                 steps.PlaySquareOfIndex(driver, 3);
+                steps.IsFreeSqureOfIndex(driver, 1).Should().Be;
             }
 
 

@@ -6,10 +6,10 @@ namespace TicTacToeAutomation
 {
     public class GameStrategy : Elements
     {
-        public int PickAState(List<int> numbers, Random random)   //random is not thread safe
+        public int PickAState(List<int> numbers)   //random is not thread safe
         {
-            int number = random.Next(numbers.Count);
-            return number;
+            var random = new Random();
+            return numbers[random.Next(numbers.Count)];
         }
 
 

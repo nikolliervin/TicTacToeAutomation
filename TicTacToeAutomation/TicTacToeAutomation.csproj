@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Elements.cs" />
+    <Compile Include="GameStrategy.cs" />
     <Compile Include="Steps.cs" />
     <Compile Include="TicTacToeAutomation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

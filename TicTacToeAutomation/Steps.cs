@@ -12,9 +12,15 @@ namespace TicTacToeAutomation
 
         public void PlaySquareOfIndex(ChromeDriver driver, int index)
         {
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
             driver.FindElement(SquareOfIndex(index)).Click();
-            Thread.Sleep(5000);
+            Thread.Sleep(2000);
+        }
+
+        public bool IsFreeSqureOfIndex(ChromeDriver driver, int index)
+        {
+            return driver.FindElement(CheckSquareOfIndex(index)).GetAttribute("class") == "x"
+                && driver.FindElement(CheckSquareOfIndex(index)).GetAttribute("class") == "o";
         }
 
 

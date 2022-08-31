@@ -22,12 +22,15 @@ namespace TicTacToeAutomation
 
             while (IStartFirst)
             {
-                steps.PlaySquareOfIndex(driver, game.PickAndPushOut(favoriteStates));
+                steps.PlaySquareOfIndex(driver, game.PickAState(favoriteStates));
 
                 game.CheckRemoveStateBusy(driver, allStates);
                 game.CheckRemoveStateBusy(driver, favoriteStates);
 
-                steps.PlaySquareOfIndex(driver, game.PickAndPushOut(favoriteStates));
+                steps.PlaySquareOfIndex(driver, game.PickAState(favoriteStates));
+
+                game.CheckRemoveStateBusy(driver, allStates);
+                game.CheckRemoveStateBusy(driver, favoriteStates);
 
 
 

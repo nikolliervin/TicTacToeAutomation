@@ -9,9 +9,11 @@ namespace TicTacToeAutomation
             driver.Navigate().GoToUrl("https://playtictactoe.org/");
         }
 
-        public void PlaySquareOne(ChromeDriver driver)
+        public void PlaySquareOfIndex(ChromeDriver driver, int index)
         {
-            driver.FindElement(SquareOfIndex(1)).Click();
+            driver.FindElement(SquareOfIndex(index)).Click();
         }
+
+
     }
 }

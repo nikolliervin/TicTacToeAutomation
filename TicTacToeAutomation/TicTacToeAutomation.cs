@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium.Chrome;
 using System;
+using System.Collections.Generic;
 
 namespace TicTacToeAutomation
 {
@@ -14,17 +15,18 @@ namespace TicTacToeAutomation
 
             steps.GoToURL(driver);
 
-            int[] goodStateSquares = new int[] { 1, 3, 5, 7, 9 };
+            List<int> favoriteStates = new List<int>() { 1, 3, 5, 7, 9 };
+            Random random = new Random();
 
             while (IStartFirst)
             {
-                steps.PlaySquareOfIndex(driver, Math.rand);
+                steps.PlaySquareOfIndex(driver, random.Next(favoriteStates.Count));
 
                 if (!steps.IsFreeSqureOfIndex(driver, 1))
                 {
                     steps.PlaySquareOfIndex(driver, 1);
                 }
-                else if (!steps.IsFreeSqureOfIndex(driver,))
+                else if (!steps.IsFreeSqureOfIndex(driver, 1)) { }
 
 
             }

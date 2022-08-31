@@ -9,9 +9,15 @@ namespace TicTacToeAutomation
         {
             ChromeDriver driver = new ChromeDriver();
             var steps = new Steps();
+            var IStartFirst = true;
 
             steps.GoToURL(driver);
-            steps.PlaySquareOfIndex(driver, 1);
+
+            while (IStartFirst)
+            {
+                steps.PlaySquareOfIndex(driver, 3);
+            }
+
 
 
         }
